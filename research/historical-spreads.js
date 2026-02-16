@@ -29,8 +29,8 @@ const RPC_URL         = "https://rpc.mantle.xyz"
 const BLOCK_TIME_SEC  = 2
 
 // ── LOAD CONFIG ──
-const config = require("./config.json")
-const { IAgniV3Pool, ILBPair } = require("./helpers/abi")
+const config = require("../config.json")
+const { IAgniV3Pool, ILBPair } = require("../helpers/abi")
 
 const OUTPUT_FILE = `historical_spreads_${DAYS_BACK}d_${SAMPLE_INTERVAL}blk.jsonl`
 const SUMMARY_FILE = `historical_summary_${DAYS_BACK}d.txt`

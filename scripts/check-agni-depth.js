@@ -7,7 +7,7 @@
 
 require("dotenv").config()
 const ethers = require("ethers")
-const config = require("./config.json")
+const config = require("../config.json")
 
 const RPC = config.RPC.HTTP
 const IERC20_ABI = ["function balanceOf(address) view returns (uint256)", "function decimals() view returns (uint8)", "function symbol() view returns (string)"]

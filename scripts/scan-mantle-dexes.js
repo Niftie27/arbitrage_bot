@@ -7,7 +7,7 @@
 
 require("dotenv").config()
 const ethers = require("ethers")
-const config = require("./config.json")
+const config = require("../config.json")
 
 const RPC = config.RPC.HTTP
 const WMNT = config.TOKENS.WMNT

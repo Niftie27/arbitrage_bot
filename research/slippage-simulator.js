@@ -24,8 +24,8 @@ const ethers = require("ethers")
 const Big = require("big.js")
 const fs = require("fs")
 
-const config = require("./config.json")
-const { IAgniV3Pool, ILBPair } = require("./helpers/abi")
+const config = require("../config.json")
+const { IAgniV3Pool, ILBPair } = require("../helpers/abi")
 
 // ── CLI ARGS ──
 const args = parseArgs()

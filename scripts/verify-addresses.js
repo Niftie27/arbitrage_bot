@@ -4,7 +4,7 @@
 // Run: node verify-addresses.js
 
 const ethers = require("ethers")
-const config = require("./config.json")
+const config = require("../config.json")
 
 const provider = new ethers.JsonRpcProvider(config.RPC.HTTP)
 
