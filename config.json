@@ -1,0 +1,127 @@
+{
+  "PROJECT_SETTINGS": {
+    "isLocal": false,
+    "isDeployed": false,
+    "CHAIN": "mantle",
+    "CHAIN_ID": 5000,
+    "NATIVE_TOKEN": "MNT",
+    "PRICE_UNITS": 4,
+    "PRICE_DIFFERENCE": 0.05,
+    "GAS_LIMIT": 600000,
+    "GAS_PRICE": 0.00000001
+  },
+
+  "RPC": {
+    "HTTP": "https://rpc.mantle.xyz",
+    "WS": "wss://mantle-rpc.publicnode.com"
+  },
+
+  "THRESHOLDS": {
+    "MAX_SPREAD_PCT": 5,
+    "MIN_SPREAD_LOG": 0.02,
+    "TRADE_SIZE_USD": 2000,
+    "LIQUIDITY_SAMPLE_PCT": 0.01
+  },
+
+  "SAFETY": {
+    "GAS_COST_USD": 0.05,
+    "SAFETY_MULTIPLIER": 1.3,
+    "MIN_PROFIT_USD": 0.10
+  },
+
+  "OBSERVABILITY": {
+    "STATS_INTERVAL_MS": 600000,
+    "POLL_INTERVAL_MS": 5000
+  },
+
+  "TOKENS": {
+    "WMNT":  "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8",
+    "WETH":  "0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111",
+    "USDT":  "0x201eba5cc46d216ce6dc03f6a759e8e766e956ae",
+    "USDC":  "0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9",
+    "mETH":  "0xcda86a272531e8640cd7f1a92c01839911b90bb0",
+    "cmETH": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+    "USDe":  "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+    "FBTC":  "0xc96de26018a54d51c097160568752c4e3bd6c364"
+  },
+
+  "PAIRS": [
+    {
+      "name": "WMNT/WETH",
+      "mode": "ARB",
+      "tier": "A",
+      "ARB_FOR":     "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8",
+      "ARB_AGAINST": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111",
+      "MM_BIN_STEP": 10,
+      "AGNI_FEE": 500
+    },
+    {
+      "name": "cmETH/WETH",
+      "mode": "ARB",
+      "tier": "A",
+      "ARB_FOR":     "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+      "ARB_AGAINST": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111",
+      "MM_BIN_STEP": 1,
+      "AGNI_FEE": 500
+    },
+    {
+      "name": "cmETH/USDe",
+      "mode": "ARB",
+      "tier": "A",
+      "ARB_FOR":     "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+      "ARB_AGAINST": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+      "MM_BIN_STEP": 20,
+      "AGNI_FEE": 2500
+    },
+    {
+      "name": "mETH/cmETH",
+      "mode": "ARB",
+      "tier": "A",
+      "ARB_FOR":     "0xcda86a272531e8640cd7f1a92c01839911b90bb0",
+      "ARB_AGAINST": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+      "MM_BIN_STEP": 1,
+      "AGNI_FEE": 100
+    },
+    {
+      "name": "USDe/WMNT",
+      "mode": "ARB",
+      "tier": "B",
+      "ARB_FOR":     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+      "ARB_AGAINST": "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8",
+      "MM_BIN_STEP": 25,
+      "AGNI_FEE": 2500
+    },
+    {
+      "name": "FBTC/cmETH",
+      "mode": "ARB",
+      "tier": "B",
+      "ARB_FOR":     "0xc96de26018a54d51c097160568752c4e3bd6c364",
+      "ARB_AGAINST": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+      "MM_BIN_STEP": 25,
+      "AGNI_FEE": 2500
+    },
+    {
+      "name": "mETH/WETH",
+      "mode": "ARB",
+      "tier": "B",
+      "ARB_FOR":     "0xcda86a272531e8640cd7f1a92c01839911b90bb0",
+      "ARB_AGAINST": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111",
+      "MM_BIN_STEP": 2,
+      "AGNI_FEE": 100
+    }
+  ],
+
+  "MERCHANTMOE": {
+    "_doc": "https://docs.merchantmoe.com/ — Liquidity Book V2.2",
+    "FACTORY": "0xa6630671775c4ea2743840f9a5016dcf2a104054",
+    "ROUTER":  "0x013e138ef6008ae5fdfde29700e3f2bc61d21e3a",
+    "QUOTER":  "0x501b8afd35df20f531ff45f6f695793ac3316c85"
+  },
+
+  "AGNI": {
+    "_doc": "https://docs.agni.finance/ — Uniswap V3 fork",
+    "FACTORY":   "0x25780dc8fc3cfbd75f33bfdab65e969b603b2035",
+    "QUOTER_V2": "0xc4aadc921e1cdb66c5300bc158a313292923c0cb",
+    "ROUTER":    "0x319b69888b0d11cec22caa5034e25fffbdc88421"
+  }
+}

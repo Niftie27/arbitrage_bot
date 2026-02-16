@@ -1,0 +1,48 @@
+# ─────────────────────────────
+# Node
+# ─────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ─────────────────────────────
+# Environment / Secrets
+# ─────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─────────────────────────────
+# Logs & Runtime Data
+# ─────────────────────────────
+logs/
+arb_spread_logs/
+*.log
+*.jsonl
+
+# historical generated data
+historical_spreads_*.jsonl
+historical_spreads_*.json
+historical_summary_*.txt
+slippage_results_*.jsonl
+
+# ─────────────────────────────
+# Hardhat / Build
+# ─────────────────────────────
+artifacts/
+cache/
+ignition/deployments/
+
+# ─────────────────────────────
+# OS
+# ─────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────
+# IDE
+# ─────────────────────────────
+.vscode/
+.idea/
