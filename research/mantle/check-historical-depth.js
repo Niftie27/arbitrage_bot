@@ -10,7 +10,7 @@
 
 require("dotenv").config()
 const ethers = require("ethers")
-const config = require("./config.json")
+const config = require("../../config.json")
 
 const RPC = config.RPC.HTTP
 const AGNI_POOL = "0x54169896d28dec0FFABE3B16f90f71323774949f" // WMNT/WETH fee=500
