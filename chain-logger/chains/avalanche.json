@@ -1,0 +1,155 @@
+{
+  "chain": "avalanche",
+  "name": "Avalanche C-Chain",
+  "rpcHttp": "https://api.avax.network/ext/bc/C/rpc",
+  "rpcWs": null,
+  "chainId": 43114,
+  "blockTime": 2,
+  "gasCostUSD": 0.10,
+  "nativeCurrency": "AVAX",
+
+  "tokens": {
+    "WAVAX":  { "address": "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7", "decimals": 18, "priceUSD": 0 },
+    "USDCe":  { "address": "0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664", "decimals": 6,  "priceUSD": 1 },
+    "USDC":   { "address": "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E", "decimals": 6,  "priceUSD": 1 },
+    "USDTe":  { "address": "0xc7198437980c041c805A1EDcbA50c1Ce5db95118", "decimals": 6,  "priceUSD": 1 },
+    "WETHe":  { "address": "0x49D5c2BdFfac6CE2BFdB6640F4F80f226bc10bAB", "decimals": 18, "priceUSD": 0 },
+    "WBTCe":  { "address": "0x50b7545627a5162F82A992c33b87aDc75187B218", "decimals": 8,  "priceUSD": 0 },
+    "JOE":    { "address": "0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd", "decimals": 18, "priceUSD": 0 },
+    "PNG":    { "address": "0x60781C2586D68229fde47564546784ab3fACA982", "decimals": 18, "priceUSD": 0 },
+    "sAVAX":  { "address": "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE", "decimals": 18, "priceUSD": 0 },
+    "GMX":    { "address": "0x62edc0692BD897D2295872a9FFCac5425011c661", "decimals": 18, "priceUSD": 0 },
+    "LINKe":  { "address": "0x5947BB275c521040051D82396192181b413227A3", "decimals": 18, "priceUSD": 0 },
+    "AAVEe":  { "address": "0x63a72806098Bd3D9520cC43356dD78afe5D386D9", "decimals": 18, "priceUSD": 0 }
+  },
+
+  "priceReference": {
+    "_comment": "Used to fetch WAVAX price: quote 1 WAVAX -> USDC on Uniswap V3",
+    "quoter": "UNI_V3",
+    "baseToken": "WAVAX",
+    "quoteToken": "USDC",
+    "fee": 500
+  },
+
+  "dexes": {
+    "TraderJoeLB": {
+      "type": "lb",
+      "quoter": "0x9A550a522BBaDFB69019b0432800Ed17855A51C3",
+      "factory": "0xb43120c4745967fa9b93E79C149E66B0f2D6Fe0c",
+      "router": "0x18556DA13313f3532c54711497A8FedAC273220E",
+      "version": "V2.2"
+    },
+    "Pangolin": {
+      "type": "v2",
+      "factory": "0xefa94DE7a4656D787667C749f7E1223D71E9FD88",
+      "router": "0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106"
+    },
+    "UniswapV3": {
+      "type": "v3",
+      "quoter": "0x82825d0554fA07f7FC52Ab63c961F330fdEFa8E8",
+      "factory": "0x740b1c1de25031C31FF4fC9A62f554A55cdC1baD"
+    }
+  },
+
+  "pairs": [
+    {
+      "name": "WAVAX/USDCe",
+      "token0": "WAVAX", "token1": "USDCe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" },
+        { "dex": "UniswapV3", "fee": 500 }
+      ]
+    },
+    {
+      "name": "WAVAX/USDC",
+      "token0": "WAVAX", "token1": "USDC",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "UniswapV3", "fee": 500 }
+      ]
+    },
+    {
+      "name": "WAVAX/USDTe",
+      "token0": "WAVAX", "token1": "USDTe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" },
+        { "dex": "UniswapV3", "fee": 500 }
+      ]
+    },
+    {
+      "name": "WAVAX/WETHe",
+      "token0": "WAVAX", "token1": "WETHe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" },
+        { "dex": "UniswapV3", "fee": 3000 }
+      ]
+    },
+    {
+      "name": "WAVAX/WBTCe",
+      "token0": "WAVAX", "token1": "WBTCe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "WAVAX/JOE",
+      "token0": "WAVAX", "token1": "JOE",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "WAVAX/sAVAX",
+      "token0": "WAVAX", "token1": "sAVAX",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "UniswapV3", "fee": 500 }
+      ]
+    },
+    {
+      "name": "WAVAX/LINKe",
+      "token0": "WAVAX", "token1": "LINKe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "WAVAX/AAVEe",
+      "token0": "WAVAX", "token1": "AAVEe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "USDCe/USDTe",
+      "token0": "USDCe", "token1": "USDTe",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "WAVAX/GMX",
+      "token0": "WAVAX", "token1": "GMX",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    },
+    {
+      "name": "WAVAX/PNG",
+      "token0": "WAVAX", "token1": "PNG",
+      "venues": [
+        { "dex": "TraderJoeLB" },
+        { "dex": "Pangolin" }
+      ]
+    }
+  ]
+}

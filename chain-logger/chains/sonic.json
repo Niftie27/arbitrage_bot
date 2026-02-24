@@ -1,0 +1,99 @@
+{
+  "chain": "sonic",
+  "name": "Sonic (S)",
+  "rpcHttp": "https://rpc.soniclabs.com",
+  "rpcWs": null,
+  "chainId": 146,
+  "blockTime": 1,
+  "gasCostUSD": 0.01,
+  "nativeCurrency": "S",
+
+  "tokens": {
+    "wS":    { "address": "0x039e2fB66102314Ce7b64Ce5Ce3E5183bc94aD38", "decimals": 18, "priceUSD": 0 },
+    "USDC":  { "address": "0x29219dd400f2Bf60E5a23d13Be72B486D4038894", "decimals": 6,  "priceUSD": 1 },
+    "WETH":  { "address": "0x50c42dEAcD8Fc9773493ED674b675bE577f2634b", "decimals": 18, "priceUSD": 0 },
+    "SHADOW":{ "address": "0x3333b97138D4b086720b5aE8A7844b1345a33333", "decimals": 18, "priceUSD": 0 },
+    "EQUAL": { "address": "0xddf26b42c1d903de8962d3f79a74a501420d5f19", "decimals": 18, "priceUSD": 0 },
+    "BOO":   { "address": "0x7A0C53F7eb34C5BC8B01691723669adA9D6CB384", "decimals": 18, "priceUSD": 0 }
+  },
+
+  "priceReference": {
+    "quoter": "SpookyV3",
+    "baseToken": "wS",
+    "quoteToken": "USDC",
+    "fee": 500
+  },
+
+  "dexes": {
+    "SpookyV2": {
+      "type": "v2",
+      "factory": "0xEE4bC42157cf65291Ba2FE839AE127e3Cc76f741",
+      "router": "0xa6AD18C2aC47803E193F75c3677b14BF19B94883"
+    },
+    "SpookyV3": {
+      "type": "v3",
+      "quoter": "0x3F2026Cae76b987C4002e62B9dF70988b4388234",
+      "factory": "0x3D91B700252e0E3eE7805d12e048a988Ab69C8ad"
+    },
+    "Equalizer2Thick": {
+      "type": "v3",
+      "quoter": "0xc701e92Db1Ef14AB64f66F18536b1E07678dB678",
+      "factory": "0x7Ca1dCCFB4f49564b8f13E18a67747fd428F1C40"
+    }
+  },
+
+  "pairs": [
+    {
+      "name": "wS/USDC",
+      "token0": "wS", "token1": "USDC",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "SpookyV3", "fee": 500 },
+        { "dex": "Equalizer2Thick", "fee": 500 }
+      ]
+    },
+    {
+      "name": "wS/WETH",
+      "token0": "wS", "token1": "WETH",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "SpookyV3", "fee": 3000 },
+        { "dex": "Equalizer2Thick", "fee": 3000 }
+      ]
+    },
+    {
+      "name": "WETH/USDC",
+      "token0": "WETH", "token1": "USDC",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "SpookyV3", "fee": 500 },
+        { "dex": "Equalizer2Thick", "fee": 500 }
+      ]
+    },
+    {
+      "name": "wS/SHADOW",
+      "token0": "wS", "token1": "SHADOW",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "SpookyV3", "fee": 3000 },
+        { "dex": "Equalizer2Thick", "fee": 3000 }
+      ]
+    },
+    {
+      "name": "wS/EQUAL",
+      "token0": "wS", "token1": "EQUAL",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "Equalizer2Thick", "fee": 3000 }
+      ]
+    },
+    {
+      "name": "wS/BOO",
+      "token0": "wS", "token1": "BOO",
+      "venues": [
+        { "dex": "SpookyV2" },
+        { "dex": "SpookyV3", "fee": 3000 }
+      ]
+    }
+  ]
+}

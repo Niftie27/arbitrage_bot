@@ -1,0 +1,66 @@
+{
+  "_comment": "TEMPLATE — Copy this file, rename to chains/<chain>.json, fill in addresses",
+  "chain": "CHAIN_NAME",
+  "name": "Human Readable Name",
+  "rpcHttp": "https://rpc.example.com",
+  "rpcWs": null,
+  "chainId": 0,
+  "blockTime": 2,
+  "gasCostUSD": 0.05,
+  "nativeCurrency": "ETH",
+
+  "tokens": {
+    "WNATIVE": { "address": "0x...", "decimals": 18, "priceUSD": 0 },
+    "USDC":    { "address": "0x...", "decimals": 6,  "priceUSD": 1 },
+    "TOKEN_A": { "address": "0x...", "decimals": 18, "priceUSD": 0 }
+  },
+
+  "priceReference": {
+    "_comment": "How to get native token USD price. Use one of the DEXes below.",
+    "quoter": "UNI_V3",
+    "baseToken": "WNATIVE",
+    "quoteToken": "USDC",
+    "fee": 500
+  },
+
+  "dexes": {
+    "_comment_types": "Supported types: v2, v3, algebra, lb",
+
+    "DEX_V3": {
+      "type": "v3",
+      "quoter": "0x... (QuoterV2 address)",
+      "factory": "0x..."
+    },
+    "DEX_V2": {
+      "type": "v2",
+      "_comment": "V2 uses router.getAmountsOut(), no separate quoter needed",
+      "factory": "0x...",
+      "router": "0x..."
+    },
+    "DEX_ALGEBRA": {
+      "type": "algebra",
+      "quoter": "0x...",
+      "factory": "0x..."
+    },
+    "DEX_LB": {
+      "type": "lb",
+      "_comment": "Trader Joe Liquidity Book. Uses LBQuoter.findBestPathFromAmountIn()",
+      "quoter": "0x...",
+      "factory": "0x...",
+      "router": "0x..."
+    }
+  },
+
+  "pairs": [
+    {
+      "name": "WNATIVE/USDC",
+      "token0": "WNATIVE", "token1": "USDC",
+      "venues": [
+        { "dex": "DEX_V3", "fee": 500 },
+        { "dex": "DEX_V2" },
+        { "dex": "DEX_LB" }
+      ],
+      "_comment": "fee only needed for v3 type. LB and V2 auto-detect."
+    }
+  ]
+}

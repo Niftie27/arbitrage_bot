@@ -26,6 +26,10 @@ historical_spreads_*.json
 historical_summary_*.txt
 slippage_results_*.jsonl
 
+# chain-logger generated outputs
+chain-logger/spread_logs/
+chain-logger/*.jsonl
+
 # ─────────────────────────────
 # Hardhat / Build
 # ─────────────────────────────

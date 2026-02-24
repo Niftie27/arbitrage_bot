@@ -1,0 +1,17 @@
+{
+  "name": "chain-logger",
+  "version": "1.0.0",
+  "description": "Systematic executable spread detection across any EVM chain. Part of the **Chain Testing Playbook** (see CHAIN_TESTING_PLAYBOOK.md).",
+  "main": "spread-logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ethers": "^6.16.0"
+  }
+}
